@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carteirinha do Aluno</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #ffffff;
+        color: #333;
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: #0A5CA3;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    header img {
+        height: 40px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título */
+    .titulo {
+        text-align: center;
+        color: #0A3D62;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+        position: relative;
+    }
+    .titulo::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: gold;
+        margin: 8px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Cartão */
+    .carteirinha {
+        background-color: #08639A;
+        border-radius: 8px;
+        max-width: 650px;
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        color: white;
+    }
+    .foto-aluno {
+        flex-shrink: 0;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: white;
+    }
+    .foto-aluno img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .info {
+        flex: 1;
+        min-width: 200px;
+    }
+    .info p {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    .info strong {
+        font-weight: bold;
+    }
+    .logo-cartao {
+        margin-top: 15px;
+        height: 30px;
+    }
+
+    /* Status */
+    .status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .status button {
+        width: 50px;
+        height: 50px;
+        background-color: #28a745;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+    }
+    .status button span {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .matricula-texto {
+        font-size: 18px;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    /* Rodapé */
+    footer {
+        background-color: #0B1D33;
+        color: white;
+        padding: 20px;
+        text-align: left;
+        font-size: 14px;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    .rodape-contato {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .copy {   padding: 20px;
+     gap: 5px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        nav {
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .carteirinha {
+            flex-direction: column;
+            text-align: center;
+        }
+        .info {
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://www.faculdademetropolitana.edu.br/_next/image?url=%2Fassets%2Fimg%2Flogo-white.png&w=1920&q=75" alt="Logo Faculdade">
+    <nav>
+        <a href="#">A FACULDADE</a>
+        <a href="#">INFRAESTRUTURA</a>
+        <a href="#">PESQUISA</a>
+        <a href="#">AUTOAVALIAÇÃO INSTITUCIONAL</a>
+        <a href="#">ACESSO RESTRITO</a>
+    </nav>
+</header>
+
+<div class="titulo">Carteirinha do aluno</div>
+
+<div class="carteirinha">
+    <div class="foto-aluno">
+        <img src="https://www.faculdademetropolitana.edu.br/_next/image?url=https%3A%2F%2Fs3.sa-east-1.amazonaws.com%2Fciebe-prm%2Fcarteirinha%2F24545%2F545357%2Ffoto.jpg&w=1200&q=75" alt="Foto do Aluno">
+    </div>
+    <div class="info">
+        <p><strong>Nome:</strong> Sarah da Silva Leal</p>
+        <p><strong>RA:</strong> 344566</p>
+        <p><strong>Curso:</strong> Clínica Médica de Pequenos Animais</p>
+        <p><strong>Instituição:</strong> Faculdade Metropolitana</p>
+        <p><strong>Validade:</strong> 10/07/2027</p>
+        <img src="https://www.faculdademetropolitana.edu.br/_next/image?url=%2Fassets%2Fimg%2Flogo-menu.png&w=640&q=75" alt="Logo Faculdade" class="logo-cartao">
+    </div>
+</div>
+
+<div class="status">
+    <button title="Matrícula ativa">
+        <span>✓</span>
+    </button>
+    <span class="matricula-texto">Matrícula Ativa</span>
+</div>
+<br>
+<br>
+<footer>
+    <div class="rodape-contato">
+        <p><strong>FALE CONOSCO</strong></p>
+        <p>📍 Av. Pres. Kennedy, 1693 - Nova Ribeirânia, Ribeirão Preto - SP, 14096-340</p>
+        <p>📞 (16) 3617-1318</p>
+        <p>📧 <a href="mailto:atendimento@faculdademetropolitana.edu.br">atendimento@faculdademetropolitana.edu.br</a></p>
+    </div>
+    <div class="rodape-contato">
+        <p><strong>CONHEÇA NOSSOS POLOS
+</strong></p>
+        <p>📍 Clique aqui para saber mais</p>
+       
+    </div>
+    <div class="rodape-contato">
+        <p><strong>TRABALHE CONOSCO
+
+</strong></p>
+        <p>📧 <a href="mailto:atendimento@faculdademetropolitana.edu.br">trabalheconosco@faculdademetropolitana.edu.br</a></p>
+       
+    </div>
+    <div class="rodape-contato">
+        <p><strong>ACERVO ACADÊMICO
+         <p>Diploma Digital</p>       
+         <p>Histórico Digital</p>       
+         <p>Currículo Digital</p>       
+</strong></p>
+        
+       
+    </div>
+    <div >
+   
+    <span >Copyright © 2025 FAMEESP</span>
+</div>
+</footer>
+
+</body>
+</html>
